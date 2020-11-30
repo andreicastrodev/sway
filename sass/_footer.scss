@@ -1,0 +1,16 @@
+.foot{
+	grid-column: center-start / center-end;
+	padding: 2rem;
+	margin-top: 20rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	@media only screen and (max-width: $bp-small) {
+		grid-column: full-start / full-end;
+	}
+
+	img{
+		width: 50%;
+	}	
+}

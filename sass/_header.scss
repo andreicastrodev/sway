@@ -1,0 +1,18 @@
+.header{
+	grid-column:  center-start / center-end;
+	margin-top: 15rem;
+
+
+	@media only screen and (max-width: $bp-large) {
+		grid-column:  full-start / full-end;
+	}
+
+
+&__content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+}

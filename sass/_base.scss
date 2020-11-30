@@ -1,0 +1,70 @@
+$bp-largest:75em; //1200 px
+$bp-large:62.5em; //1000px
+$bp-medium:50em; // 800px
+$bp-small:37.5em; // 600px
+$bp-smallest: 25em; // 400px
+$bp-mini: 20em; // 320px
+
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; // 10px/16px  = 62.5% = 1 rem = 10 px;
+
+		@media only screen and (max-width: $bp-large){
+		font-size: 55%;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		font-size:50%;
+	}
+
+	@media only screen and (max-width: $bp-smallest) {
+		font-size:40%;
+	}		
+}
+
+
+
+body{
+	font-weight: 300;
+	line-height: 1.6;
+	background-color: black;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+
+}
+
+
+.container{
+	display: grid;
+	grid-template-rows:90vh repeat(6, min-content);
+	grid-template-columns:[full-start] 1fr [center-start] repeat(8 ,[col-start] minmax(min-content, 14rem)[col-end]) [center-end] 1fr[full-end];
+	@media only screen and (max-width: $bp-small) {
+		grid-template-rows: 60vh repeat(6, min-content);
+	}
+}
+
+
+#intros {
+
+	@media only screen and (max-width: $bp-large) {
+		width: 60rem;
+	}
+
+@media only screen and (max-width: $bp-large) {
+	width: 50rem;
+}
+
+	@media only screen and (max-width: $bp-small) {
+		width: 35rem;
+	}	
+}
+
